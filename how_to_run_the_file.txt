@@ -1,0 +1,18 @@
+Build & run it with below command:-
+---------------------------------
+docker build . -t flask_api_model
+docker run -p 8000:8000 flask_api_model
+
+Run through Swagger from Browser:-
+--------------------------------
+
+Home Page - http://127.0.0.1:8000/apidocs/ 
+GET - http://127.0.0.1:8000/apidocs/#/default/get_predict
+POST - http://127.0.0.1:8000/apidocs/#/default/post_predict_file
+
+
+From Postman:-
+-----------
+Home Page - http://127.0.0.1:8000/
+GET - http://127.0.0.1:8000/predict?variance=0&skewness=2&curtosis=3&entropy=4
+POST - http://127.0.0.1:8000/predict_file and attach the test file from request body

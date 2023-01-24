@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "e80a2b25-6a74-495b-a4b5-abc773bf5e0e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Req",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/predict?variance=0&skewness=2&curtosis=3&entropy=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					],
+					"query": [
+						{
+							"key": "variance",
+							"value": "0"
+						},
+						{
+							"key": "skewness",
+							"value": "2"
+						},
+						{
+							"key": "curtosis",
+							"value": "3"
+						},
+						{
+							"key": "entropy",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Req File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/OfficeDocuments/Docker/Docker/Loknath/flaskAPI_MLModelExample/TestFile.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/predict_file",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"predict_file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
